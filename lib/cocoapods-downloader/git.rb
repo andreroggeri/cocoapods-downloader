@@ -140,6 +140,11 @@ module Pod
           end
         end
 
+        if ENV["CP_GIT_REFERENCE_FOLDER"]
+          puts '************* Using reference folder <o/ => ' + ENV["CP_GIT_REFERENCE_FOLDER"]
+          command += ['--reference=' + ENV["CP_GIT_REFERENCE_FOLDER"]]
+        end
+
         command
       end
 
